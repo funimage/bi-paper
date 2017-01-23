@@ -1,6 +1,6 @@
 # bi-paper
 
-Figures for upcoming bi-paper
+Figures for upcoming bioinformatics paper.
 
 
 ## License
