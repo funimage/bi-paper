@@ -4,7 +4,7 @@ Figures for upcoming bioinformatics paper.
 
 ## Figure image attribution
 
-The original images used in our figures can be found [here](http://remf.dartmouth.edu/imagesindex.html) are in the public domain courtesy of the Dartmouth Electron Microscope Facility.
+The original images used in our figures can be found [here](http://remf.dartmouth.edu/imagesindex.html) and are in the public domain courtesy of the Dartmouth Electron Microscope Facility.
 
 ## License
 
