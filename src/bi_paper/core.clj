@@ -8,5 +8,17 @@
 (defn -main
   ""
   [& args]
-  (ij/show (funimage.imagej.ops.morphology/dilate (ij/open-img "/Users/timothystiles/git/clojure/bi-paper/resources/pollen.jpg") (shape/rectangle-shape 5))))
+  (ij/save-img (funimage.imagej.ops.morphology/dilate (ij/open-img "/Users/timothystiles/git/clojure/bi-paper/resources/pollen.jpg") (shape/rectangle-shape 5)) "pollen-dilate-rect.png"))
 
+(defn point-filter
+  ""
+  []
+  (ij/save-img (img/threshold (funimage.imagej.ops.morphology/dilate (ij/open-img "/Users/timothystiles/git/clojure/bi-paper/resources/pollen.jpg") (shape/rectangle-shape 2)) 100) "pollen-point-filter.png"))
+
+(defn dilate-spread
+  []
+  (map #(ij/save-img (funimage.imagej.ops.morphology/dilate (ij/open-img "/Users/timothystiles/git/clojure/bi-paper/resources/pollen.jpg") (shape/rectangle-shape %)) (str "pollen-dilate-rect-" % ".png")) (range 2 5)))
+
+(defn erode-spread
+  []
+  (map #(ij/save-img (funimage.imagej.ops.morphology/erode (ij/open-img "/Users/timothystiles/git/clojure/bi-paper/resources/pollen.jpg") (shape/rectangle-shape %)) (str "pollen-erode-rect-" % ".png")) (range 2 5)))
